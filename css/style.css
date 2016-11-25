@@ -1,0 +1,57 @@
+.row {
+    padding: 0 15px 0 15px;
+}
+
+
+.no-pad {
+    padding: 0;
+    width: all;
+}
+
+.section-name {
+    height: 250px;
+}
+/* team section */
+.team-image {
+    height: 350px;
+    width: 80%;
+}
+/* works section*/
+.works-menu-image-lg {
+    height: 600px;
+}
+.works-menu-image {
+    height: 300px;
+    width: 100%;
+}
+.works-menu-text {
+    color: #bbb;
+    background-color: #111;
+    height: 300px;
+}
+.works-image {
+    height: 400px;
+    width: 100%;
+}
+.works-item {
+    color: #bbb;
+    height: 200px;
+    background-color: #111;
+}
+.works-text {
+    color: #666;
+    height: 200px;
+}
+/* services section */
+/* news section */
+.news-image {
+    height: 300px;
+}
+.news-text {
+    height: 300px;
+}
+/* footer */
+.footer {
+    height: 50px;
+    background-color: #bbb;
+}
