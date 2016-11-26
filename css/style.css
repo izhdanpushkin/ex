@@ -60,18 +60,21 @@
 .test {
     /*width: 100px;*/
     /*height: 100px;*/
-    z-index: 0;
+    /*z-index: 0;*/
 }
 .overlay {
     z-index: 1;
     display: block;
     position: absolute;
-    color: red;
     background-color: rgba(200, 200, 200, 0.7);
     border: 6px solid transparent;
-    background-clip: padding-box;
+    /* check more about this property */
+    background-clip: content-box;
     top: 0px;
     left: 0px;
     width: 0px;
     height: 0px;
+}
+.overlay:hover {
+    /*background-color: rgba(200, 200, 200, 0.7);*/
 }
