@@ -91,7 +91,12 @@ img {
 }
 
 /* quotes */
-.quotes-image {
+.quotes-bg {
+    position: absolute;
+    background: url(../img/quote.jpg);
+    width: 100%;
+    height: 100%;
+    background-position: center;
 }
 
 /* footer image */
@@ -120,4 +125,27 @@ img {
 }
 .text-row {
     padding: 0 65px 0 65px;
+}
+.carousel-wrapper {
+    /*position: absolute;*/
+    height: 100vh;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    text-align: center;
+    /*padding: 1000px 100px 1000px 100px;*/
+}
+.owl-theme {
+    top: 40%;
+}
+.owl-theme .owl-controls .owl-page span{
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    background: #fff;
+    width: 2vw;
+    height: 3px;
+    margin: 3px 5px;
+}
+.quotes-text {
+    font-size: 3vh;
 }

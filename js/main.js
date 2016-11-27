@@ -9,3 +9,14 @@ $('.test').mouseenter(function(){
     off_left = img.offset().left - 1 + "px";
     overlay.css({"width":width, "height":height, "top":off_top, "left":off_left});
 });
+
+$(document).ready(function() {
+    bg = $(".quotes-bg")
+    $(".carousel-wrapper").css("height", bg.height)
+    console.log(bg.height())
+
+
+    $("#quotes").owlCarousel({
+    singleItem : true
+    });
+});
