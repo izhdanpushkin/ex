@@ -49,29 +49,29 @@ img {
 
 /* works section*/
 .works-menu-image-lg {
-    height: 700px;
+    height: 100vh;
 }
 .works-menu-image {
-    height: 350px;
+    height: 50vh;
     width: 100%;
 }
 .works-menu-text {
     color: #bbb;
     background-color: #111;
-    height: 350px;
+    height: 50vh;
 }
 .works-image {
-    height: 490px;
+    height: 66vh;
     width: 100%;
 }
 .works-item {
     color: #bbb;
-    height: 200px;
+    height: 34vh;
     background-color: #111;
 }
 .works-text {
     color: #666;
-    height: 200px;
+    height: 34vh;
 }
 
 /* services section */
