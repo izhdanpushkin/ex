@@ -66,15 +66,15 @@
     z-index: 1;
     display: block;
     position: absolute;
-    background-color: rgba(200, 200, 200, 0.7);
-    border: 6px solid transparent;
+    border: 10px solid transparent;
     /* check more about this property */
     background-clip: content-box;
+    transition: background-color 0.25s;
     top: 0px;
     left: 0px;
     width: 0px;
     height: 0px;
 }
 .overlay:hover {
-    /*background-color: rgba(200, 200, 200, 0.7);*/
+    background-color: rgba(255, 255, 255, 0.5);
 }
