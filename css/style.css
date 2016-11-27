@@ -1,3 +1,6 @@
+img {
+    object-fit: cover;
+}
 .row {
     margin-left: 50px;
     margin-right: 0;
@@ -11,7 +14,7 @@
 
 
 .section-name {
-    height: 250px;
+    height: 304px;
 }
 
 /* overlay */
@@ -32,10 +35,15 @@
     background-color: rgba(255, 255, 255, 0.5);
 }
 
+/* about section */
+.about-text {
+    height: 159px;
+}
+
 
 /* team section */
 .team-image {
-    height: 350px;
+    /*height: 460px;*/
     width: 80%;
 }
 
@@ -67,14 +75,31 @@
 }
 
 /* services section */
+.services-text {
+    height: 181px;
+    background-color: rgba(230, 230, 230, 0.8);
+    background-clip: content-box;
+    padding: 0 60px 40px 60px;
+}
 
 /* news section */
 .news-image {
-    height: 300px;
+    height: 460px;
 }
 .news-text {
-    height: 300px;
+    height: 460px;
 }
+
+/* quotes */
+.quotes-image {
+}
+
+/* footer image */
+.footer-image {
+    height: 210px;
+    width: 100%;
+}
+
 
 /* footer */
 .footer {
@@ -92,4 +117,7 @@
     height: 100%;
     min-width: 50px;
     background-color: #ddd;
+}
+.text-row {
+    padding: 0 65px 0 65px;
 }

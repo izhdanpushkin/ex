@@ -5,7 +5,7 @@ $('.test').mouseenter(function(){
     img = $(this);
     width = parseInt(img.css("width")) + 1 + 'px';
     height = parseInt(img.css("height")) + 1 + 'px';
-    off_top = img.offset().top + "px";
-    off_left = img.offset().left + "px";
+    off_top = img.offset().top - 1 + "px";
+    off_left = img.offset().left - 1 + "px";
     overlay.css({"width":width, "height":height, "top":off_top, "left":off_left});
 });
