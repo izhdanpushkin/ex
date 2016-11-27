@@ -15,8 +15,16 @@ $(document).ready(function() {
     $(".carousel-wrapper").css("height", bg.height)
     console.log(bg.height())
 
-
     $("#quotes").owlCarousel({
     singleItem : true
+    });
+
+
+    $("#news-carousel").owlCarousel({
+        singleItem : true
+    });
+
+    $("#news-image-carousel").owlCarousel({
+        singleItem : true
     });
 });
