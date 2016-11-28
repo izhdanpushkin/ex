@@ -9,7 +9,7 @@ $('.screened').mouseenter(function(){
     img = $(this);
     // Shrinking 1 px so no overflow occurs
     width = parseInt(img.css("width")) - 1 + 'px';
-    height = parseInt(img.css("height")) + 'px';
+    height = parseInt(img.css("height")) - 1 + 'px';
     console.log(parseFloat(img.css("width")), parseFloat(img.css("height")))
     console.log(width, height)
     off_top = Math.floor(img.position().top) + "px";
@@ -24,6 +24,17 @@ $(".works .screened").mouseenter(function(){
 $(".team .screened").mouseenter(function(){
     $(this).after(team_buttons);
 })
+
+$(document).ready(function(){
+    // Kinda sorta ok workaround for possible 1-2 px gaps between works elements due to weird rounding, should look again later.
+    $('.works', '.works-text', '.works-item', 'works-menu-text').each(function(){
+        height = parseInt($(this).css("height")) + 1;
+        width = parseInt($(this).css("width")) + 1;
+        $(this).css("height", height);
+        $(this).css("width", width);
+        console.log(height, width);
+    });
+});
 
 $(document).ready(function() {
     bg = $(".quotes-bg");
