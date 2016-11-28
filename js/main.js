@@ -18,7 +18,7 @@ $('.screened').mouseenter(function(){
     overlay.show();
 });
 
-$(".works .screened").mouseenter(function(){
+$(".works .screened, .footer-images .screened").mouseenter(function(){
     $(this).after(works_buttons);
 })
 $(".team .screened").mouseenter(function(){
