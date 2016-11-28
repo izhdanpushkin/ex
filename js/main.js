@@ -25,16 +25,16 @@ $(".team .screened").mouseenter(function(){
     $(this).after(team_buttons);
 })
 
-$(document).ready(function(){
-    // Kinda sorta ok workaround for possible 1-2 px gaps between works elements due to weird rounding, should look again later.
-    $('.works', '.works-text', '.works-item', 'works-menu-text').each(function(){
-        height = parseInt($(this).css("height")) + 1;
-        width = parseInt($(this).css("width")) + 1;
-        $(this).css("height", height);
-        $(this).css("width", width);
-        console.log(height, width);
-    });
-});
+// $(document).ready(function(){
+//     // Kinda sorta ok workaround for possible 1-2 px gaps between works elements due to weird rounding, should look again later.
+//     $('.works-image').each(function(){
+//         height = parseInt($(this).css("height")) + 1;
+//         width = parseInt($(this).css("width")) + 1;
+//         $(this).css("height", height);
+//         $(this).css("width", width);
+//         console.log(height, width);
+//     });
+// });
 
 $(document).ready(function() {
     bg = $(".quotes-bg");

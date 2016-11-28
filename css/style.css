@@ -97,17 +97,17 @@ img {
     height: 50vh;
 }
 .works-image {
-    height: 66vh;
+    height: 67vh;
     width: 100%;
 }
 .works-item {
     color: #bbb;
-    height: 34vh;
+    height: 33vh;
     background-color: #111;
 }
 .works-text {
     color: #666;
-    height: 34vh;
+    height: 33vh;
 }
 
 /* services section */
@@ -192,3 +192,6 @@ img {
     font-size: 3vh;
 }
 
+.works-image {
+    /*height: auto;*/
+}
