@@ -1,24 +1,29 @@
 overlay = $("#overlay");
-team_buttons = $("#team-buttons")
+team_buttons = $("#social-buttons");
+works_buttons = $("#works-buttons")
 
 $('.screened').mouseenter(function(){
-    $(this).after(overlay)
-    $(this).after(team_buttons)
+    $(this).after(overlay);
     overlay.hide(); // Removes some weird behavior
     overlay.css({"width":"", "height":"", "top":"", "left":""});
     img = $(this);
-    width = parseInt(img.css("width")) + 'px';
+    // Shrinking 1 px so no overflow occurs
+    width = parseInt(img.css("width")) - 1 + 'px';
     height = parseInt(img.css("height")) + 'px';
-    // Rounding down so no overflow occurs
+    console.log(parseFloat(img.css("width")), parseFloat(img.css("height")))
+    console.log(width, height)
     off_top = Math.floor(img.position().top) + "px";
     off_left = Math.floor(img.position().left) + "px";
-    console.log(off_top, off_left)
-    // off_top = '0px'
-    // off_left = '0px'
     overlay.css({"width":width, "height":height, "top":off_top, "left":off_left});
     overlay.show();
-    // team_buttons.show();
 });
+
+$(".works .screened").mouseenter(function(){
+    $(this).after(works_buttons);
+})
+$(".team .screened").mouseenter(function(){
+    $(this).after(team_buttons);
+})
 
 $(document).ready(function() {
     bg = $(".quotes-bg");
