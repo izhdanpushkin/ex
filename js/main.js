@@ -88,32 +88,34 @@ $(document).ready(function(){
             // console.log('on works')
             if(isOn(wk1)){
                 hd.show();
-                window.parent = $("#works-menu-1");
-                window.fallback = $("#works-menu-2");
+                window.currentMenu = $("#works-menu-1");
+                window.fallbackMenu = $("#works-menu-2");
                 if(hd.children().length == 0){
                     hd.append($("#works-menu-1 ul, #works-menu-1 span"));
-                } else if(fallback.children().length == 0){
-                    hd.contents().appendTo(fallback);
+                } else if(fallbackMenu.children().length == 0){
+                    hd.contents().appendTo(fallbackMenu);
                 }
                 // console.log('on wk1');
             } else if(isOn(wk2)){
                 hd.show();
-                parent = $("#works-menu-2");
-                fallback = $("#works-menu-1");
+                currentMenu = $("#works-menu-2");
+                fallbackMenu = $("#works-menu-1");
                 if(hd.children().length == 0){
                     hd.append($("#works-menu-2 ul, #works-menu-2 span"));
-                }else if(fallback.children().length == 0){
-                    hd.contents().appendTo(fallback);
+                }else if(fallbackMenu.children().length == 0){
+                    hd.contents().appendTo(fallbackMenu);
                 }
                 // console.log('on wk2');
             } else {
                 hd.hide();
-                if(parent.children().length == 0){
-                    hd.contents().appendTo(parent);
-                } else if(fallback.children().length == 0){
-                    hd.contents().appendTo(fallback);
+                if(typeof(currentMenu) == 'object'){ // lazy workaround
+                    if(currentMenu.children().length == 0){
+                        hd.contents().appendTo(currentMenu);
+                    } else if(fallbackMenu.children().length == 0){
+                        hd.contents().appendTo(fallbackMenu);
+                    }
+                    // console.log('fk');
                 }
-                // console.log('fk');
             }
 
 
