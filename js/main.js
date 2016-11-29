@@ -39,6 +39,7 @@ $(".header-button").hover(function(){
     }
 )
 
+
 // Page navigation
 page = $("html, body");
 
