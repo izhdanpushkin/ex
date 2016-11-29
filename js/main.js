@@ -25,6 +25,7 @@ $(".team .screened").mouseenter(function(){
     $(this).after(team_buttons);
 })
 
+
 // Page navigation
 page = $("html, body");
 
@@ -38,7 +39,6 @@ isOn = function(item){
         return false
     }
 }
-
 
 // Stops the scrolling animation on manual scroll.
 page.bind("scroll mousedown DOMMouseScroll mousewheel keyup", function(e){
@@ -83,9 +83,19 @@ $(document).ready(function(){
     // test
     $(window).scroll(function(){
         hd = $("#works-header");
+        nav = $("#header");
         hd.hide();
+
+        // Header
+        if(!isOn($("#home-test"))){
+            nav.addClass("header-vertical");
+            $('body').css("margin-left", "65px");
+        } else {
+            nav.removeClass("header-vertical");
+            $('body').css("margin-left", "0");
+        }
+        // Works-header
         if(isOn(wk)){
-            // console.log('on works')
             if(isOn(wk1)){
                 hd.show();
                 window.currentMenu = $("#works-menu-1");
@@ -95,7 +105,6 @@ $(document).ready(function(){
                 } else if(fallbackMenu.children().length == 0){
                     hd.contents().appendTo(fallbackMenu);
                 }
-                // console.log('on wk1');
             } else if(isOn(wk2)){
                 hd.show();
                 currentMenu = $("#works-menu-2");
@@ -105,7 +114,6 @@ $(document).ready(function(){
                 }else if(fallbackMenu.children().length == 0){
                     hd.contents().appendTo(fallbackMenu);
                 }
-                // console.log('on wk2');
             } else {
                 hd.hide();
                 if(typeof(currentMenu) == 'object'){ // lazy workaround
@@ -114,13 +122,10 @@ $(document).ready(function(){
                     } else if(fallbackMenu.children().length == 0){
                         hd.contents().appendTo(fallbackMenu);
                     }
-                    // console.log('fk');
                 }
             }
-
-
-            //////////////
-        } else if(isOn(sv)){
+        }
+        if(isOn(sv)){
             console.log('on services');
         } else if(isOn(nw)){
             console.log('on news');
