@@ -1,3 +1,4 @@
+// Overlay stuff
 overlay = $("#overlay");
 team_buttons = $("#social-buttons");
 works_buttons = $("#works-buttons")
@@ -24,48 +25,101 @@ $(".team .screened").mouseenter(function(){
     $(this).after(team_buttons);
 })
 
-// Get offset of the menu
-var menu1 = $("#works-menu-1").offset().top + $("#works-menu-1").outerHeight();
-var menu2 = $("#works-menu-2").offset().top + $("#works-menu-2").outerHeight();
-var menu2_top = $("#works-menu-2").offset().top;
-console.log(menu1, menu2, menu2_top)
-$(document).ready(function(){
-    $(window).scroll(function(){
-        // pos = $(window.scrollTop)
-        if($(window).scrollTop() > menu2){
-            stuff2 = $("#works-menu-2 ul, #works-menu-2 span");
-            $("#works-header").append(stuff2);
-            $("#works-header").show();
-            console.log('if')
-        } else if($(window).scrollTop() > menu2_top) {
-            $("#works-header").hide();
-            // Release stuff to menu2
-            header = $("#works-header ul, #works-header span");
-            $("#works-menu-2").append(header);
-            console.log('elif1')
-        }else if($(window).scrollTop() > menu2_top - 350){
-            $("#works-header").hide();
-            // Release stuff to menu1
-            header = $("#works-header ul, #works-header span");
-            $("#works-menu-1").append(header);
-        } else if($(window).scrollTop() > menu1 && $(window).scrollTop() < menu2_top) {
-            $("#works-header").show();
-            // Grab stuff from menu1
-            stuff1 = $("#works-menu-1 ul, #works-menu-1 span");
-            $("#works-header").append(stuff1);
-            $("#works-header").show();
-            console.log('elif3');
-        }
-        else{
-            $("#works-header").hide();
-            // Release stuff to menu1
-            header = $("#works-header ul, #works-header span");
-            $("#works-menu-1").append(header);
-            console.log('else');
-        }
-    });
+// Page navigation
+isOn = function(item){
+    pos = $(window).scrollTop()
+    borders = [item.offset().top, item.offset().top + item.outerHeight(true)]
+    if(borders[0] <= pos && pos <= borders[1]){
+        return true
+    } else {
+        return false
+    }
+}
 
-});
+$(document).ready(function(){
+    // Positional markers
+    // fuck me it's ugly
+    wm1 = $("#works-menu-1");
+    wm2 = $("#works-menu-2");
+    w1i1 = $("#works-1-1 ");
+    w1i2 = $("#works-1-2");
+    w1i3 = $("#works-1-3");
+    w1i4 = $("#works-1-4");
+    w1i5 = $("#works-1-5");
+    w2i1 = $("#works-2-1");
+    w2i2 = $("#works-2-2");
+    w2i3 = $("#works-2-3");
+    w2i4 = $("#works-2-4");
+    w2i5 = $("#works-2-5");
+    wk1 = $("#works-1");
+    wk2 = $("#works-2");
+    ab = $("#about");
+    wk = $("#works");
+    sv = $("#services");
+    nw = $("#news");
+    qt = $("#quote");
+    ct = $("#contact");
+
+
+    // test
+    $(window).scroll(function(){
+        hd = $("#works-header");
+        hd.hide();
+        // window.parent = $("#works-menu-1")
+        if(isOn(wk)){
+            // console.log('on works')
+            if(isOn(wk1)){
+                hd.show();
+                window.parent = $("#works-menu-1");
+                window.fallback = $("#works-menu-2");
+                if(hd.children().length == 0){
+                    hd.append($("#works-menu-1 ul, #works-menu-1 span"));
+                } else if(fallback.children().length == 0){
+                    hd.contents().appendTo(fallback);
+                }
+                console.log('on wk1');
+            } else if(isOn(wk2)){
+                hd.show();
+                parent = $("#works-menu-2");
+                fallback = $("#works-menu-1");
+                if(hd.children().length == 0){
+                    hd.append($("#works-menu-2 ul, #works-menu-2 span"));
+                }else if(fallback.children().length == 0){
+                    hd.contents().appendTo(fallback);
+                }
+                console.log('on wk2');
+            } else {
+                hd.hide();
+                if(parent.children().length == 0){
+                    hd.contents().appendTo(parent);
+                } else if(fallback.children().length == 0){
+                    hd.contents().appendTo(fallback);
+                }
+                // hd.empty();
+                console.log('fk');
+            }
+
+
+            //////////////
+        } else if(isOn(sv)){
+            console.log('on services');
+        } else if(isOn(nw)){
+            console.log('on news');
+        } else if(isOn(qt)){
+            console.log('on quotes');
+        } else if(isOn(ct)){
+            console.log('on contact');
+        } else if(isOn(ab)){
+            console.log('on about');
+        } else{}
+    });
+})
+
+
+
+
+
+
 
 // $(document).ready(function(){
 //     // Kinda sorta ok workaround for possible 1-2 px gaps between works elements due to weird rounding, should look again later.
