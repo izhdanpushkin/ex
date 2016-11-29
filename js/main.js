@@ -1,8 +1,8 @@
 // Overlay stuff
 overlay = $("#overlay");
 team_buttons = $("#social-buttons");
-works_buttons = $("#works-buttons")
-$("#works-header").hide()
+works_buttons = $("#works-buttons");
+$("#works-header").hide();
 
 $('.screened').mouseenter(function(){
     $(this).after(overlay);
@@ -26,9 +26,12 @@ $(".team .screened").mouseenter(function(){
 })
 
 // Page navigation
+page = $("html, body");
+
 isOn = function(item){
     pos = $(window).scrollTop()
-    borders = [item.offset().top, item.offset().top + item.outerHeight(true)]
+    borders = [item.offset().top,
+        item.offset().top + item.outerHeight(true)]
     if(borders[0] <= pos && pos <= borders[1]){
         return true
     } else {
@@ -36,12 +39,20 @@ isOn = function(item){
     }
 }
 
+
+// Stops the scrolling animation on manual scroll.
+page.bind("scroll mousedown DOMMouseScroll mousewheel keyup", function(e){
+    if ( e.which > 0 || e.type === "mousedown" || e.type === "mousewheel"){
+         page.stop();
+    }
+});
+
 $(document).ready(function(){
     // Positional markers
     // fuck me it's ugly
     wm1 = $("#works-menu-1");
     wm2 = $("#works-menu-2");
-    w1i1 = $("#works-1-1 ");
+    w1i1 = $("#works-1-1");
     w1i2 = $("#works-1-2");
     w1i3 = $("#works-1-3");
     w1i4 = $("#works-1-4");
@@ -60,12 +71,19 @@ $(document).ready(function(){
     qt = $("#quote");
     ct = $("#contact");
 
+    // Work-header navigational buttons
+    $(".nav-button").click(function() {
+        numb = this.id.match(/\d/g);
+        page.animate({
+            scrollTop: $("#works-" + numb[0] + '-' + numb[1]).offset().top + 1
+        }, 1000);
+    })
+
 
     // test
     $(window).scroll(function(){
         hd = $("#works-header");
         hd.hide();
-        // window.parent = $("#works-menu-1")
         if(isOn(wk)){
             // console.log('on works')
             if(isOn(wk1)){
@@ -77,7 +95,7 @@ $(document).ready(function(){
                 } else if(fallback.children().length == 0){
                     hd.contents().appendTo(fallback);
                 }
-                console.log('on wk1');
+                // console.log('on wk1');
             } else if(isOn(wk2)){
                 hd.show();
                 parent = $("#works-menu-2");
@@ -87,7 +105,7 @@ $(document).ready(function(){
                 }else if(fallback.children().length == 0){
                     hd.contents().appendTo(fallback);
                 }
-                console.log('on wk2');
+                // console.log('on wk2');
             } else {
                 hd.hide();
                 if(parent.children().length == 0){
@@ -95,8 +113,7 @@ $(document).ready(function(){
                 } else if(fallback.children().length == 0){
                     hd.contents().appendTo(fallback);
                 }
-                // hd.empty();
-                console.log('fk');
+                // console.log('fk');
             }
 
 
