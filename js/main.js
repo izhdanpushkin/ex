@@ -25,6 +25,19 @@ $(".team .screened").mouseenter(function(){
     $(this).after(team_buttons);
 })
 
+// Animate header buttons underline
+$(".header-button").hover(function(){
+    $(this).find('.border').animate({
+        width: '100%',
+        left: 0,
+        right: 0
+    }, '400')}, function(){
+        $(this).find('.border').animate({
+        width: '0',
+        left: '50%'
+    }, '400')
+    }
+)
 
 // Page navigation
 page = $("html, body");

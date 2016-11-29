@@ -322,7 +322,7 @@ img {
     position: fixed;
     display: block;
     z-index: 10;
-    width: 400px;
+    width: auto;
     top: 0;
     right: 0;
     /*min-width: 50px;*/
@@ -336,6 +336,20 @@ img {
     left: 0;
     right: initial;
     margin: 0;
+}
+.header li {
+    overflow-x: hidden;
+    list-style: none;
+    display: inline-block;
+    padding: 10px;
+    color: #fff;
+}
+.border {
+    position: relative;
+    width: 0;
+    left: 50%;
+    height: 3px;
+    background: #fff;
 }
 
 .text-row {
