@@ -104,9 +104,11 @@ $(document).ready(function(){
         if(!isOn($("#home-test"))){
             nav.addClass("header-vertical");
             $('body').css("margin-left", "65px");
+            nav.find(".home-button").hide();
         } else {
             nav.removeClass("header-vertical");
             $('body').css("margin-left", "0");
+            nav.find(".home-button").show();
         }
         // Works-header
         if(isOn(wk)){
