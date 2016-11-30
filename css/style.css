@@ -279,6 +279,10 @@ img {
 
 
 /* team section */
+.team.overlay-wrap{
+    /* temporary fix */
+    position: inherit;
+}
 .team-image {
     /*height: 460px;*/
     margin: 0;
