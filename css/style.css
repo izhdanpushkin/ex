@@ -74,6 +74,9 @@ img {
     height: 15px;
     width: 15px;
     padding: 0;
+    -webkit-transition: fill 0.25s;
+    -moz-transition: fill 0.25s;
+    -o-transition: fill 0.25s;
     transition: fill 0.25s;
     margin: 5px 5px 0 0;
 }
@@ -180,6 +183,9 @@ img {
     width: 340px;
     background-color: #999;
     opacity: 1;
+    -webkit-transition-duration: 0.6s;
+    -moz-transition-duration: 0.6s;
+    -o-transition-duration: 0.6s;
     transition-duration: 0.6s;
     transform: skewX(30deg);
 }
@@ -215,6 +221,9 @@ img {
     border: 10px solid transparent;
     /* check more about this property */
     background-clip: content-box;
+    -webkit-transition: background-color 0.25s;
+    -moz-transition: background-color 0.25s;
+    -o-transition: background-color 0.25s;
     transition: background-color 0.25s;
     top: 0px;
     left: 0px;
@@ -382,6 +391,9 @@ img {
     border-bottom: 1px solid #111;
     text-align: center;
     outline: none;
+    -webkit-transition: border-bottom-color 0.25s;
+    -moz-transition: border-bottom-color 0.25s;
+    -o-transition: border-bottom-color 0.25s;
     transition: border-bottom-color 0.25s;
 }
 .contacts-input:hover {
