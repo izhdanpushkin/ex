@@ -127,6 +127,37 @@ img {
     top: 0;
     left: 13px;
 }
+/* header-button-works*/
+.works-dropdown {
+    display: none;
+}
+.header-button-works {
+    /*overflow-y: hidden;*/
+}
+.works-dropdown span, .works-dropdown p {
+    padding: 10px 10px 7px 10px;
+}
+.works-dropdown span:hover, .works-dropdown p:hover {
+    border-left: 4px solid white;
+}
+.header-button-works:hover .works-dropdown {
+    display: block;
+    background: #111;
+    position: absolute;
+    margin-top: 10px;
+    width: 200px;
+    height: auto;
+}
+.works-dropdown-1 span, .works-dropdown-2 span {
+    display: none;
+}
+.works-dropdown-1:hover span, .works-dropdown-2:hover span{
+    display: block;
+    background: #444;
+    width: 100%;
+}
+
+
 
 /* buttons */
 .home-button {
