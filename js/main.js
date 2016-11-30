@@ -87,11 +87,21 @@ $(document).ready(function(){
 
     // Work-header navigational buttons
     $(".nav-button").click(function() {
-        numb = this.id.match(/\d/g);
+        // Get numbers from id
+        var numb = this.id.match(/\d/g);
         page.animate({
             scrollTop: $("#works-" + numb[0] + '-' + numb[1]).offset().top + 1
         }, 1000);
     })
+
+
+    // Header navigational buttons
+    $(".header-button,.header-dropdown-button").click(function(e){
+        e.stopPropagation();
+        var target = $(this).attr('data-page');
+        page.animate({
+            scrollTop: $("#" + target).offset().top + 1}, 1000);
+    });
 
 
     // test
