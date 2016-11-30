@@ -83,7 +83,52 @@ img {
 }
 
 /* home section */
+/* header */
+.header {
+    position: fixed;
+    display: block;
+    z-index: 10;
+    width: 100%;
+    top: 0;
+    right: 0;
+    left: 0;
+    min-height: 50px;
+}
+.header ul {
+    float: right;
+    margin: 15px 50px 0 0;
+}
+.header-vertical {
+    min-height: 100%;
+    width: 50px;
+    left: 0;
+    right: initial;
+    margin: 0;
+}
+.header li {
+    overflow-x: hidden;
+    list-style: none;
+    cursor: pointer;
+    display: inline-block;
+    padding: 10px;
+    color: #fff;
+}
+.underline {
+    position: relative;
+    width: 0;
+    left: 50%;
+    height: 3px;
+    background: #fff;
+}
+.logo {
+    position: absolute;
+    width: 80px;
+    height: 70px;
+    top: 0;
+    left: 13px;
+}
 
+/* buttons */
 .home-button {
     display: block;
     z-index: 6;
@@ -233,6 +278,7 @@ img {
 /* works items */
 .works-menu-image-lg {
     height: 100vh;
+    width: 100%;
 }
 .works-menu-image {
     height: 50vh;
@@ -367,40 +413,7 @@ img {
 
 
 
-.header {
-    position: fixed;
-    display: block;
-    z-index: 10;
-    width: auto;
-    top: 0;
-    right: 0;
-    /*min-width: 50px;*/
-    min-height: 50px;
-    margin: 15px 50px 0 0;
-    /*background-color: indigo;*/
-}
-.header-vertical {
-    min-height: 100%;
-    width: 50px;
-    left: 0;
-    right: initial;
-    margin: 0;
-}
-.header li {
-    overflow-x: hidden;
-    list-style: none;
-    cursor: pointer;
-    display: inline-block;
-    padding: 10px;
-    color: #fff;
-}
-.border {
-    position: relative;
-    width: 0;
-    left: 50%;
-    height: 3px;
-    background: #fff;
-}
+
 .text-row {
     padding: 0 65px 0 65px;
 }

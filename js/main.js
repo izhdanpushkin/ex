@@ -27,12 +27,12 @@ $(".team .screened").mouseenter(function(){
 
 // Animate header buttons underline
 $(".header-button").hover(function(){
-    $(this).find('.border').animate({
+    $(this).find('.underline').animate({
         width: '100%',
         left: 0,
         right: 0
     }, '400')}, function(){
-        $(this).find('.border').animate({
+        $(this).find('.underline').animate({
         width: '0',
         left: '50%'
     }, '400')
