@@ -261,6 +261,7 @@ img {
 }
 .overlay-wrap {
     display: inline-block;
+    width: 100%;
 }
 .overlay-wrap:hover .overlay {
     background-color: rgba(255, 255, 255, 0.5);
@@ -282,6 +283,7 @@ img {
 .team.overlay-wrap{
     /* temporary fix */
     position: inherit;
+    width: auto;
 }
 .team-image {
     /*height: 460px;*/
@@ -492,4 +494,17 @@ img {
 
 .text-row {
     padding: 0 65px 0 65px;
+}
+.home-test {
+    height: 100%;
+    width: 100%;
+}
+.home-wrap {
+    position: absolute;
+    z-index: 1;
+    height: 100vh;
+    width: 100%;
+    left: 0;
+    background-color: #111;
+    opacity: 0.3;
 }
