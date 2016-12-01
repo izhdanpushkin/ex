@@ -118,13 +118,6 @@ img {
     float: right;
     margin: 15px 50px 0 0;
 }
-.header-vertical {
-    min-height: 100%;
-    width: 50px;
-    left: 0;
-    right: initial;
-    margin: 0;
-}
 .header li {
     overflow-x: hidden;
     list-style: none;
@@ -133,6 +126,64 @@ img {
     padding: 10px;
     color: #fff;
 }
+/* vertical header*/
+.header-vertical {
+    position: fixed;
+    min-height: 100%;
+    width: 250px;
+    /*left: -100px;*/
+    /*right: initial;*/
+    background: beige;
+    margin: 0;
+}
+.header-vertical .logo {
+    display: none;
+}
+
+.header-vertical .header-button-works:hover .works-dropdown {
+    margin: 0;
+    width: 100%;
+    position: relative;
+}
+.header-vertical .header-button-works:hover .dropdown {
+    background: none;
+}
+
+
+.header-vertical .header-button-works, .header-vertical .header-button-works:hover {
+    /*width: 200px;*/
+
+}
+.header-vertical .dropdown, .header-vertical .dropdown:hover
+{
+    display: block;
+    background: none;
+    margin: 0;
+    padding: 0;
+}
+.header-vertical ul {
+    margin: 0;
+    display: inline-block;
+    width: 100%;
+    padding: 0 25px 0 0;
+    /*float: initial;*/
+}
+.header-vertical li {
+    color: rebeccapurple;
+    padding: 0;
+    text-align: center;
+    /*right: 25px;*/
+    width: 100%;
+    margin-right: 25px;
+    border-right: 5px solid;
+}
+.header-nav-line {
+
+}
+
+
+
+
 .underline {
     position: relative;
     width: 0;

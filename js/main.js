@@ -112,11 +112,13 @@ $(document).ready(function(){
 
         // Header
         if(!isOn($("#home-test"))){
+            // nav.removeClass("header");
             nav.addClass("header-vertical");
             $('body').css("margin-left", "65px");
             nav.find(".home-button").hide();
         } else {
             nav.removeClass("header-vertical");
+            // nav.addClass("header");
             $('body').css("margin-left", "0");
             nav.find(".home-button").show();
         }
