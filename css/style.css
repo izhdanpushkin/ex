@@ -317,9 +317,15 @@ img {
     -moz-transition-duration: 0.6s;
     -o-transition-duration: 0.6s;
     transition-duration: 0.6s;
+    -webkit-transform: skewX(30deg);
+    -moz-transform: skewX(30deg);
+    -o-transform: skewX(30deg);
     transform: skewX(30deg);
 }
 .home-button:hover .home-button-overlay{
+    -webkit-transform: skewX(30deg) translate(100%, -100px);
+    -moz-transform: skewX(30deg) translate(100%, -100px);
+    -o-transform: skewX(30deg) translate(100%, -100px);
     transform: skewX(30deg) translate(100%, -100px);
     background-color: #111;
     opacity: 0;
@@ -346,6 +352,9 @@ img {
     position: absolute;
     color: #fff;
     z-index: inherit;
+    -webkit-transform-origin: left top 0;
+    -moz-transform-origin: left top 0;
+    -o-transform-origin: left top 0;
     transform-origin: left top 0;
     height: 50px;
     width: 170px;
