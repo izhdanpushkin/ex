@@ -127,8 +127,19 @@ img {
     color: #fff;
 }
 
+/* mobile menu */
+.mobile-menu {
+    display: none;
+}
+.header-vertical .mobile-menu {
+    position: absolute;
+    top: 0;
+    right: 7px;
+    display: block;
+    width: 45px;
+    height: 50px;
 
-
+}
 /* vertical header*/
 .header-vertical * {
     overflow: hidden;
@@ -154,6 +165,8 @@ img {
 .header-vertical .logo {
     display: block;
     position: initial;
+    background-image: url(../img/logo-dark.png);
+    margin: 90px auto 40px auto;
 }
 
 .header-vertical .header-button-works:hover .dropdown {
@@ -209,6 +222,10 @@ img {
     border-left: none;
     border-color: #111;
 }
+/* vertical header open */
+.header-vertical.header-open ul{
+    padding: 0;
+}
 
 
 
@@ -226,6 +243,11 @@ img {
     height: 70px;
     top: 0;
     left: 13px;
+}
+.logo a {
+    display: block;
+    height: 100%;
+    width: 100%;
 }
 /* header-button-works*/
 .works-dropdown {
