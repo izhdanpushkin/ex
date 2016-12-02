@@ -54,6 +54,16 @@ isOn = function(item){
     }
 }
 
+bodyMargin = function(){
+    if($("#header").hasClass("header-open")){
+        $('body').css("margin-left", "365px");
+    } else if($("#header").hasClass("header-vertical")) {
+        $('body').css("margin-left", "65px");
+    } else {
+        $('body').css("margin-left", "0");
+    }
+}
+
 // Stops the scrolling animation on manual scroll.
 page.bind("scroll mousedown DOMMouseScroll mousewheel keyup", function(e){
     if ( e.which > 0 || e.type === "mousedown" || e.type === "mousewheel"){
@@ -103,6 +113,21 @@ $(document).ready(function(){
             scrollTop: $("#" + target).offset().top + 1}, 1000);
     });
 
+    // Header width
+
+
+    // Mobile menu button
+    $(".mobile-menu").click(function(){
+        if($("#header").hasClass("header-open")) {
+            console.log('closed');
+            $("#header").removeClass("header-open");
+        } else {
+            console.log('opened');
+            $("#header").addClass("header-open");
+        }
+        bodyMargin();
+    })
+
 
     // test
     $(window).scroll(function(){
@@ -112,15 +137,14 @@ $(document).ready(function(){
 
         // Header
         if(!isOn($("#home-test"))){
-            // nav.removeClass("header");
             nav.addClass("header-vertical");
-            $('body').css("margin-left", "65px");
             nav.find(".home-button").hide();
+            bodyMargin();
         } else {
-            nav.removeClass("header-vertical");
-            // nav.addClass("header");
+            nav.removeClass("header-vertical header-open");
             $('body').css("margin-left", "0");
             nav.find(".home-button").show();
+            bodyMargin();
         }
         // Works-header
         if(isOn(wk)){

@@ -134,7 +134,7 @@ img {
 .header-vertical .mobile-menu {
     position: absolute;
     top: 0;
-    right: 7px;
+    right: 4px;
     display: block;
     width: 45px;
     height: 50px;
@@ -151,9 +151,20 @@ img {
     position: fixed;
     min-height: 100%;
     width: 350px;
-    background: beige;
+    background: #fff;
     margin: 0;
+    left: -300px;
 }
+.header-vertical.header-open {
+    left: 0;
+}
+.header-vertical.header-open .logo {
+    display: block;
+}
+.header-vertical.header-open ul {
+    justify-content: flex-start;
+}
+
 .header-vertical .nav-wrap {
     position: absolute;
     display: flex;
@@ -163,7 +174,7 @@ img {
     justify-content: space-around;
 }
 .header-vertical .logo {
-    display: block;
+    display: none;
     position: initial;
     background-image: url(../img/logo-dark.png);
     margin: 90px auto 40px auto;
