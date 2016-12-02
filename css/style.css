@@ -126,16 +126,22 @@ img {
     padding: 10px;
     color: #fff;
 }
+
+
+
 /* vertical header*/
+.header-vertical * {
+    overflow: hidden;
+}
+.header-vertical *:hover .underline, .header-vertical .underline {
+    display: none;
+}
 .header-vertical {
     position: fixed;
     min-height: 100%;
     width: 350px;
     background: beige;
     margin: 0;
-}
-.header-vertical .logo {
-    display: none;
 }
 .header-vertical .nav-wrap {
     position: absolute;
@@ -156,9 +162,7 @@ img {
     position: relative;
     background: none;
 }
-
-.header-vertical .dropdown, .header-vertical .dropdown:hover
-{
+.header-vertical .dropdown, .header-vertical .dropdown:hover {
     display: block;
     background: none;
     margin: 0;
@@ -173,14 +177,37 @@ img {
     justify-content: center;
     padding: 0 25px 0 0;
 }
-.header-vertical li {
+.header-vertical li, .header-vertical .header-button-works>p {
     color: #111;
     margin-bottom: 7px;
     padding: 0;
     text-align: center;
     width: 100%;
     margin-right: 25px;
-    border-right: 5px solid;
+    border-right: 5px solid #999;
+}
+.header-vertical li.header-button-works {
+    border: none;
+    margin-bottom: 0;
+}
+.header-vertical
+.header-vertical .underline {
+    display: none;
+}
+.header-vertical .works-dropdown-menu {
+    margin-bottom: 7px;
+}
+.header-vertical .works-dropdown-menu>p, .header-vertical .works-dropdown-menu>span {
+    border-right: 5px solid #999;
+}
+.header-vertical .header-button-works:hover .works-dropdown-menu {
+    margin-bottom: 7px;
+}
+.header-vertical .dropdown:hover, .header-vertical .header-button:hover
+, .header-vertical .header-button p:hover
+{
+    border-left: none;
+    border-color: #111;
 }
 
 
@@ -204,8 +231,8 @@ img {
 .works-dropdown {
     display: none;
 }
-.header-button-works {
-    /*overflow-y: hidden;*/
+.header-button-works>p{
+    margin: 0;
 }
 .works-dropdown span, .works-dropdown p {
     padding: 10px 10px 7px 10px;
@@ -221,10 +248,10 @@ img {
     width: 200px;
     height: auto;
 }
-.works-dropdown-1 span, .works-dropdown-2 span {
+.works-dropdown-menu span {
     display: none;
 }
-.works-dropdown-1:hover span, .works-dropdown-2:hover span{
+.works-dropdown-menu:hover span{
     display: block;
     background: #444;
     width: 100%;
