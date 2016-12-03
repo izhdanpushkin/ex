@@ -53,12 +53,14 @@ isOn = function(item){
         return false
     }
 }
-
+// Width correction
 bodyMargin = function(){
     if($("#header").hasClass("header-open")){
         $('body').css("margin-left", "365px");
+        $('.col-owl').css("padding-right", "365px");
     } else if($("#header").hasClass("header-vertical")) {
         $('body').css("margin-left", "65px");
+        $('.col-owl').css("padding-right", "65px");
     } else {
         $('body').css("margin-left", "0");
     }

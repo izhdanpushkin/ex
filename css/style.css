@@ -571,6 +571,9 @@ img {
 }
 
 /* carousels */
+.col-owl {
+    padding-right: 65px;
+}
 .carousel-wrapper {
     /*position: absolute;*/
     height: 100vh;
