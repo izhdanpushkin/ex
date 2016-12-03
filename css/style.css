@@ -556,6 +556,61 @@ img {
 .contacts-input:hover {
     border-bottom-color: #bbb;
 }
+.contacts-form .home-button {
+    position: initial;
+    height: 170px;
+    margin: auto;
+    -webkit-transform: translateZ(0) scale(1.0, 1.0) rotate(90deg);
+    -moz-transform: translateZ(0) scale(1.0, 1.0) rotate(90deg);
+    -o-transform: translateZ(0) scale(1.0, 1.0) rotate(90deg);
+    transform: translateZ(0) scale(1.0, 1.0) rotate(90deg);
+
+}
+.contacts-form .home-button:hover {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+.contacts-form .overflow-wrap {
+}
+.contact-button {
+    position: absolute;
+    display: block;
+    top: 0;
+    height: 170px;
+    width: 50px;
+    -webkit-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    -o-transform-origin: 0 0;
+    transform-origin: 0 0;
+}
+input.contact-button {
+    opacity: 0;
+    z-index: 10;
+}
+.contact-button-text {
+    opacity: 1;
+    top: initial;
+    font-size: 18px;
+    line-height: 18px;
+    padding: 16px 0 16px 0;
+    width: 170px;
+    height: 50px;
+    color: #fff;
+    -webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    transform: rotate(270deg);
+}
+.contact-button .overflow-wrap {
+    position: relative;
+    top: 0;
+    height: 100%;
+    width: 100%;
+
+}
+
 
 /* footer image */
 .footer-image {
